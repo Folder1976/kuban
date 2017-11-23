@@ -1,0 +1,100 @@
+/*Header Styles*/
+
+.header
+
+  .header__top-line
+    background: #323232
+    width: 100%
+    padding: 10px 0
+  .top-line__menu
+    width: 30%
+    text-align: justify
+    float: left
+    @include clearfix
+    &:after
+      content: ''
+      width: 100%
+      display: inline-block
+    li
+      display: inline-block
+    a
+      color: #aaaaaa
+      font-size: 14px
+
+  .top-line__schedule
+    display: inline-block
+    width: 50%
+    p
+      text-align: center
+      color: $accent-color
+
+
+  .header__main
+    margin: 30px 0 20px
+  .header__main__inner
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+  .top-logo
+    width: 30%
+    @include clearfix
+    img
+      float: left
+      margin-right: 13px
+    span
+      text-transform: uppercase
+      color: $main-font-color
+      vertical-align: middle
+
+  .header__select
+    width: 15%
+
+  .header__phones
+    width: 20%
+    text-align: center
+    a
+      display: inline-block
+      color: $main-font-color
+      font-size: 20px
+      font-family: 'Open Sans Semibold', sans-serif
+
+  .header__address
+    width: 15%
+    a
+      color: #3c3c3c
+
+  .header__button
+    width: 12%
+
+
+  .header__nav
+    width: 70%
+    margin: 0 auto
+
+  .nav-list
+    display: flex
+    align-items: center
+    justify-content: space-between
+    li
+      width: 20%
+      display: inline-flex
+      border-right: 1px solid #c8c8c8
+      text-align: center
+      a
+        display: inline-block
+        text-align: center
+        margin: 0 auto
+        padding: 3px 0
+        font-size: 18px
+        color: $main-font-color
+        transition: all .3s
+        &:hover
+          color: $accent-color
+    li:last-child
+      border-right: none
+
+
+
+
+/*End Header Styles*/
