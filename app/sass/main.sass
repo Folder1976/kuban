@@ -54,8 +54,15 @@ body
 	overflow-x: hidden
 	opacity: 1
 
+.wrapper
+	min-height: 100%
+	overflow: hidden
+	position: relative
+.empty
+	height: 247px
+
 .container
-	width: 1170px
+	width: 100%
 	margin: 0 auto
 	padding: 0 15px
 
@@ -75,7 +82,7 @@ button
 	border: none
 	border-radius: 5px
 	color: #ffffff
-	padding: 5px 0 8px
+	padding: 10px 0 10px
 	text-align: center
 	transition: all .3s
 	&:hover
@@ -94,3 +101,6 @@ button
 
 @import "_layout"
 @import "_media/lg" // Всегда в конце
+@import "_media/md"
+@import "_media/sm"
+@import "_media/xs"
