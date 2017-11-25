@@ -32,8 +32,8 @@
   font-family: "OpenSans-Bold";
   font-weight: bold;
   font-style: normal;
-  src: url("../fonts/OOpenSans-Bold/OpenSans-Bold.eot");
-  src: url("../fonts/OOpenSans-Bold/OpenSans-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/OOpenSans-Bold/OpenSans-Bold.woff") format("woff"), url("../fonts/OOpenSans-Bold/OpenSans-Bold.ttf") format("truetype"); }
+  src: url("../fonts/OpenSans-Bold/OpenSans-Bold.eot");
+  src: url("../fonts/OpenSans-Bold/OpenSans-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-Bold/OpenSans-Bold.woff") format("woff"), url("../fonts/OpenSans-Bold/OpenSans-Bold.ttf") format("truetype"); }
 
 @font-face {
   font-family: "svgfont";
@@ -1720,7 +1720,7 @@ button, .button {
   background: #ffffff;
   text-align: left;
   position: absolute;
-  top: 40px;
+  /*top: 40px;*/
   -webkit-border-radius: 3px;
           border-radius: 3px;
   width: auto;
