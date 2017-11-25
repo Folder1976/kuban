@@ -1,0 +1,12 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright (C) 2017 by original authors @ fontello.com</metadata>
+<defs>
+<font id="carousel-arrows" horiz-adv-x="1000" >
+<font-face font-family="carousel-arrows" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="main-arrow" unicode="&#xe800;" d="M233 98l-233 253 232 252c231 249 290 289 320 212 10-28-50-106-196-253l-211-212 211-212c146-147 206-225 196-253-30-76-87-38-319 213z" horiz-adv-x="553" />
+</font>
+</defs>
+</svg>

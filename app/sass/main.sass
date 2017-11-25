@@ -17,20 +17,29 @@
 		box-sizing: border-box
 
 *::-webkit-input-placeholder
-	color: #666
+	color: $default-font-color
 	opacity: 1
+	font-size: 18px
+	font-family: $default-font
 
 *:-moz-placeholder
-	color: #666
+	color: $default-font-color
 	opacity: 1
+	font-size: 18px
+	font-family: $default-font
 
 *::-moz-placeholder
-	color: #666
+	color: $default-font-color
 	opacity: 1
+	font-size: 18px
+	font-family: $default-font
 
 *:-ms-input-placeholder
-	color: #666
+	color: $default-font-color
 	opacity: 1
+	font-size: 18px
+	font-family: $default-font
+
 
 
 
@@ -54,8 +63,18 @@ body
 	overflow-x: hidden
 	opacity: 1
 
+section
+	position: relative
+
+.wrapper
+	min-height: 100%
+	overflow: hidden
+	position: relative
+.empty
+	height: 247px
+
 .container
-	width: 1170px
+	width: 100%
 	margin: 0 auto
 	padding: 0 15px
 
@@ -70,16 +89,92 @@ a
 		border: none
 		outline: none
 
-button
+button, .button
 	background: $accent-color
 	border: none
 	border-radius: 5px
 	color: #ffffff
-	padding: 5px 0 8px
+	padding: 9px 0 9px
 	text-align: center
 	transition: all .3s
+	display: inline-block
 	&:hover
-		background: rgb(255, 115, 120)
+		background: #b4484c
+	&:hover, &:focus, &:active
+		border: none
+		outline: none
+
+
+
+		//POPUPS
+
+.popup
+	padding: 50px
+	background: transparent
+	.popup-wrap
+		max-width: 480px
+		background: #ffffff
+		padding: 55px 58px
+		border-radius: 3px
+		text-align: center
+	.form__heading
+		font-family: "OpenSans-Semibold", sans-serif
+		color: $accent-color
+		font-size: 34px
+	.form__post-heading
+		font-size: 20px
+		margin: 15px 0 25px
+	input
+		display: block
+		margin: 10px auto
+		width: 100%
+		border-radius: 5px
+		border: 1px solid #d4d7e0
+		height: 40px
+		padding: 0 17px
+		font-size: 18px
+	.form__bottom-text
+		font-size: 14px
+		line-height: 20px
+		margin: 25px 0 30px
+	.button
+		display: inline-block
+		border: none
+	.fancybox-close-small
+		background: transparent
+	.fancybox-close-small:focus::after
+		outline: none
+	.fancybox-close-small::after
+		width: 25px
+		height: 25px
+		background: transparent
+		color: #ffffff
+		opacity: .8
+		font-size: 60px
+		font-family: $default-font
+		transition: all .3s
+	.fancybox-close-small:hover
+		background: transparent
+	.fancybox-close-small:hover::after
+		color: $accent-color
+
+
+.main-popup
+	.button
+		width: 47%
+
+
+.success-popup
+	.success-popup__heading
+		font-family: "OpenSans-Semibold", sans-serif
+		font-size: 34px
+		line-height: 44px
+		color: $main-font-color
+		margin-bottom: 45px
+	.button
+		width: 47%
+
+
 
 
 
@@ -92,5 +187,9 @@ button
 
 
 
-@import "_layout"
+@import "layout"
+@import "main-page"
 @import "_media/lg" // Всегда в конце
+@import "_media/md"
+@import "_media/sm"
+@import "_media/xs"
