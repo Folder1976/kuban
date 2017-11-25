@@ -1,11 +1,18 @@
 /*Header Styles*/
-
 .header
+  min-height: 189px
+  margin-top: 38px
+
+.header-inner
   position: fixed
   //border-bottom: 1px solid #d6d6d6
-  width: 100%
   padding-bottom: 25px
-  box-shadow: 0 4px 2px #d6d6d6
+  box-shadow: 0 4px 4px rgba(#000000, .1)
+  top: 0
+  right: 0
+  left: 0
+  z-index: 100
+  background: #ffffff
 
 .header__top-line
   background: #323232
@@ -79,7 +86,7 @@
     display: inline-block
     color: $main-font-color
     font-size: 20px
-    font-family: 'Open Sans Semibold', sans-serif
+    font-family: "OpenSans-Semibold", sans-serif
 
 .header__address
   width: 15%
@@ -102,7 +109,8 @@
   display: flex
   align-items: center
   justify-content: space-around
-  li
+  .nav-list__item
+    position: relative
     width: 18%
     display: inline-block
     border-right: 1px solid #c8c8c8
@@ -117,6 +125,31 @@
     &:last-child
       border-right: none
       width: 24%
+
+.nav-list__dropdown
+  background: #ffffff
+  text-align: left
+  position: absolute
+  top: 40px
+  border-radius: 3px
+  width: auto
+  min-width: 220px
+  left: -5%
+  z-index: 20
+  .dropdown__item
+    padding: 15px 45px
+    border-bottom: 1px solid #dcdcdc
+    transition: all .4s
+    &:last-child
+      border: none
+      border-bottom-left-radius: 3px
+      border-bottom-right-radius: 3px
+    &:hover
+      background: $accent-color
+      a
+        color: #ffffff
+
+
 
 /*End Header Styles*/
 
@@ -173,7 +206,7 @@
     display: inline-block
     color: $main-font-color
     font-size: 20px
-    font-family: 'Open Sans Semibold', sans-serif
+    font-family: "OpenSans-Semibold", sans-serif
 
 .footer__address
   text-align: right

@@ -1,0 +1,65 @@
+/*Main Page Styles*/
+
+.main-slide-wrap
+  background: url("../img/main-slider-bg.jpg") center no-repeat
+  background-size: cover
+  //min-height: 600px
+.intro__slider
+  z-index: 1
+  .slick-prev::before, .slick-next::before
+    //content: '\e800'
+    content: url("../img/left.png")
+    font-family: "carousel-arrows", sans-serif
+    font-size: 35px
+  .slick-next
+    transform: rotate(180deg)
+    right: -40px
+    margin-top: -45px
+  .slick-next, .slick-prev
+    width: 27px
+    height: 45px
+  .slick-prev
+    left: -40px
+
+
+
+.intro__slide
+  display: flex
+  align-items: center
+  justify-content: flex-end
+  height: 600px
+.intro__first-slide
+  display: flex
+  align-items: center
+  justify-content: flex-end
+.intro__slide__block
+  width: 48%
+  background: #ffffff
+  border-radius: 5px
+  padding: 49px 60px 60px
+  display: inline-block
+  margin-right: 5%
+  .intro__slide_title
+    text-transform: uppercase
+    font-size: 46px
+    line-height: 56px
+    color: $secondary-accent-color
+    font-family: "OpenSans-Bold", sans-serif
+    font-weight: bold
+    margin-bottom: 11px
+  p
+    color: $main-font-color
+    font-size: 20px
+    line-height: 26px
+    width: 80%
+    display: inline-block
+    margin-bottom: 34px
+  .button
+    width: 32%
+
+
+
+
+
+
+/*End Main Page Styles*/
