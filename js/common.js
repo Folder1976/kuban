@@ -63,11 +63,40 @@ $(function() {
         ]
     });
 
+    $('.slider__feedback').slick({
+        arrows: true,
+        dots: true,
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                }
+            }
+        ]
+    });
+
     /*END SLICK*/
 
     // Fancybox
 
     $("[data-fancybox]").fancybox();
+
+
+    // zoom docs
+
+    $('.zoom-item').zoom({
+        magnify: '1.5',
+    });
+
+
 
 
 
@@ -95,3 +124,5 @@ $(function() {
 
 
 });
+
+
