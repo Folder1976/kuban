@@ -103,10 +103,24 @@ button, .button
 	&:hover, &:focus, &:active
 		border: none
 		outline: none
+.form
+	input
+		border-radius: 5px
+		height: 40px
+		padding: 0 17px
+		font-size: 18px
+	.form__heading
+		font-family: "OpenSans-Semibold", sans-serif
+		color: $accent-color
+		font-size: 34px
+	.form__post-heading
+		font-size: 20px
+		margin: 15px 0 25px
 
 
 
-		//POPUPS
+
+//POPUPS
 
 .popup
 	padding: 50px
@@ -117,22 +131,11 @@ button, .button
 		padding: 55px 58px
 		border-radius: 3px
 		text-align: center
-	.form__heading
-		font-family: "OpenSans-Semibold", sans-serif
-		color: $accent-color
-		font-size: 34px
-	.form__post-heading
-		font-size: 20px
-		margin: 15px 0 25px
-	input
-		display: block
-		margin: 10px auto
-		width: 100%
-		border-radius: 5px
-		border: 1px solid #d4d7e0
-		height: 40px
-		padding: 0 17px
-		font-size: 18px
+		input
+			width: 100%
+			display: block
+			margin: 10px auto
+			border: 1px solid #d4d7e0
 	.form__bottom-text
 		font-size: 14px
 		line-height: 20px
@@ -173,6 +176,13 @@ button, .button
 		margin-bottom: 45px
 	.button
 		width: 47%
+
+
+.section-heading-small
+	.h3
+		font-family: "OpenSans-Bold", sans-serif
+		color: $secondary-accent-color
+		font-size: 46px
 
 
 

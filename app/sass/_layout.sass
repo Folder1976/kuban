@@ -4,7 +4,7 @@
   margin-top: 38px
 
 .header-inner
-  position: fixed
+  //position: fixed
   //border-bottom: 1px solid #d6d6d6
   padding-bottom: 25px
   box-shadow: 0 4px 4px rgba(#000000, .1)
@@ -61,10 +61,10 @@
     vertical-align: middle
     font-size: 12px
     width: 115px
+    text-align: left
 
 
-.header__select
-  width: 17%
+.main-select, .header__select
   .selectize-input
     padding-left: 17px
   .selectize-dropdown
@@ -80,10 +80,15 @@
   .selectize-dropdown-content
     padding: 10px 0
 
+.header__select
+  width: 17%
+
+
+
 .header__phones
   width: 18%
   a
-    display: inline-block
+    display: block
     color: $main-font-color
     font-size: 20px
     font-family: "OpenSans-Semibold", sans-serif

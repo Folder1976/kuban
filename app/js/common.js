@@ -1,10 +1,27 @@
 $(function() {
 
 
+    //Main menu script
+    $('.nav-list__item').children('ul').hide();
+
+    $(document).on('mouseover', '.nav-list__item', function(){
+        $(this).children('ul').show();
+    });
+    $(document).on('mouseout', '.nav-list__item', function(){
+        $(this).children('ul').hide();
+    });
+
+
+
     /*Selectize*/
 
-    $('select').selectize({
+    $('#header_select').selectize({
         create: true,
+    });
+
+    $('#select-beast').selectize({
+        create: true,
+        sortField: 'text'
     });
 
     /*SLICK*/
@@ -12,6 +29,26 @@ $(function() {
     $('.single-item').slick({
         arrows: true,
         dots: false,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                }
+            }
+        ]
+    });
+
+    $('.slider__partners').slick({
+        arrows: true,
+        dots: false,
+        infinite: true,
+        slidesToShow: 5,
+        slidesToScroll: 1,
         responsive: [
             {
                 breakpoint: 768,
