@@ -43,6 +43,7 @@ $(function() {
         ]
     });
 
+
     $('.slider__partners').slick({
         arrows: true,
         dots: false,
@@ -51,13 +52,27 @@ $(function() {
         slidesToScroll: 1,
         responsive: [
             {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 4
+                }
+            },
+            {
                 breakpoint: 768,
                 settings: {
+                    slidesToShow: 3
+                }
+            },
+            {
+                breakpoint: 668,
+                settings: {
+                    slidesToShow: 2
                 }
             },
             {
                 breakpoint: 480,
                 settings: {
+                    slidesToShow: 1,
                 }
             }
         ]
@@ -71,13 +86,15 @@ $(function() {
         slidesToScroll: 1,
         responsive: [
             {
-                breakpoint: 768,
+                breakpoint: 980,
                 settings: {
+                    slidesToShow: 2
                 }
             },
             {
-                breakpoint: 480,
+                breakpoint: 768,
                 settings: {
+                    slidesToShow: 1
                 }
             }
         ]
