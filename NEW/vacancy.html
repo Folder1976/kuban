@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Vacancy</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="theme-color" content="#fff">
+	<link rel="stylesheet" media="all" href="css/reset.css" >
+	<link rel="stylesheet" media="all" href="css/common.css" >
+	<link rel="stylesheet" media="all" href="css/vacancy.css" >
+</head>
+<body>
+	<!-- BEGIN  main-container -->
+	<div class="main-container">
+		<!-- BEGIN  breadcrumbs -->
+		<ul class="breadcrumbs">
+			<li class="breadcrumbs__item"><a href="/index.php">Главная</a></li>
+			<li class="breadcrumbs__item is-current"><a href="/index.php">Вакансии</a></li>
+		</ul>
+		<!-- END breadcrumbs -->
+		<!-- BEGIN vacancy block -->
+		<section class="vacancy">
+			<h1 class="main__title">ВАКАНСИИ</h1>
+			<!-- BEGIN vacancy blocks -->
+			<div class="vacancy__blocks">
+				<div class="vacancy__blocks__block">
+					<h2 class="vacancy__blocks__block__title">ЭКСПЕРТ ПО РАБОТЕ С КЛИЕНТАМИ</h2>
+					<p>Активная жизненная позиция, желание работать, развиваться, обучаться - Коммуникабельность, стрессоустойчивость, пунктуальность, ответственность. Опыт работы: 1 год. Мы ждем, что вы: - организованы и нацелены на результат; - открыты и коммуникабельны; - способны выполнять несколько задач одновременно; - готовы к большому количеству звонков.</p>
+					<a data-fancybox data-src="#success-popup" href="javascript:;" class="vacancy__button button">Откликнуться</a>
+				</div>
+				<div class="vacancy__blocks__block">
+					<h2 class="vacancy__blocks__block__title">ГЛАВНЫЙ МЕНЕДЖЕР</h2>
+					<p>Активная жизненная позиция, желание работать, развиваться, обучаться - Коммуникабельность, стрессоустойчивость, пунктуальность, ответственность. Опыт работы: 1 год. Мы ждем, что вы: - организованы и нацелены на результат; - открыты и коммуникабельны; - способны выполнять несколько задач одновременно; - готовы к большому количеству звонков.</p>
+					<a data-fancybox data-src="#success-popup" href="javascript:;" class="vacancy__button button">Откликнуться</a>
+				</div>
+				<div class="vacancy__blocks__block">
+					<h2 class="vacancy__blocks__block__title">БУХГАЛТЕР</h2>
+					<p>Активная жизненная позиция, желание работать, развиваться, обучаться - Коммуникабельность, стрессоустойчивость, пунктуальность, ответственность. Опыт работы: 1 год. Мы ждем, что вы: - организованы и нацелены на результат; - открыты и коммуникабельны; - способны выполнять несколько задач одновременно; - готовы к большому количеству звонков.</p>
+					<a data-fancybox data-src="#success-popup" href="javascript:;" class="vacancy__button button">Откликнуться</a>
+				</div>
+				<div class="vacancy__blocks__block">
+					<h2 class="vacancy__blocks__block__title">ЮРИСТ</h2>
+					<p>Активная жизненная позиция, желание работать, развиваться, обучаться - Коммуникабельность, стрессоустойчивость, пунктуальность, ответственность. Опыт работы: 1 год. Мы ждем, что вы: - организованы и нацелены на результат; - открыты и коммуникабельны; - способны выполнять несколько задач одновременно; - готовы к большому количеству звонков.</p>
+					<a data-fancybox data-src="#success-popup" href="javascript:;" class="vacancy__button button">Откликнуться</a>
+				</div>
+			</div>
+			<!-- END vacancy blocks -->
+			<!-- BEGIN paging block -->
+			<nav class="paging news__paging">
+				<div class="paging__holder">
+					<a href="#" class="paging__prev"><i class="paging__prev__arrow icon icon-arr"></i></a>
+					<a href="#" class="paging__next"><i class="paging__next__arrow icon icon-arr"></i></a>
+					<ul class="paging__nav">
+						<li class="paging__item paging__item_active"><a class="paging__link" href="#">1</a></li>
+						<li class="paging__item"><a class="paging__link" href="#">2</a></li>
+						<li class="paging__item"><a class="paging__link" href="#">3</a></li>
+					</ul>
+				</div>
+			</nav>
+			<!-- END paging block -->
+		</section>
+		<!-- END vacancy block -->
+	</div>
+	<!-- END main-container -->
+	<!-- BEGIN POPUPS -->
+	<div id="main-popup" class="popup main-popup" style="display: none;">
+		<div class="popup-wrap">
+			<form class="form popup__form">
+				<!-- Hidden Required Fields -->
+				<input type="hidden" name="project_name" value="Cuban">
+				<input type="hidden" name="admin_email" value="bstroshek@gmail.com">
+				<input type="hidden" name="form_subject" value="Кубанский центр сертификации и экспертизы - order">
+				<div class="form__heading">Вакансия</div>
+				<div class="form__post-heading">Оставьте свои данные <br> и вам перезвоним</div>
+				<div class="form-control">
+						<input class="name" name="form-control__name" placeholder="Имя" required type="text">
+						<input class="name" name="form-control__phone" placeholder="Телефон" required type="text">
+						<input class="name" name="form-control__e-mail" placeholder="E-mail" required type="text">
+				</div>
+				<div class="form__bottom-text">Гарантируем конфиденциальность <br>по ФЗ №152 от 27.07.2006</div>
+				<input type="submit" value="Позвоните мне" class="button">
+			</form>
+		</div>
+	</div>
+	<div class="popup success-popup" id="success-popup" style="display: none;">
+		<div class="popup-wrap">
+			<div class="success-popup__heading">Спасибо. <br>Мы свяжемся с вами <br> в ближайшее <br>время</div>
+			<a href="#" class="button">Хорошо</a>
+		</div>
+	</div>
+	<!-- END POPUPS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+		integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+		crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+/*BEGIN  main__title */
+	.experts__main__title {
+		margin-bottom: 145px;
+	}
+/*END main__title */
+/* BEGIN experts__blocks */
+.experts__blocks{
+	width:100%;
+	text-align:center;
+	font:16px/26px "OpenSans-Regular", Arial, Verdana, sans-serif;
+}
+.experts__blocks:after{
+	content:"";
+	display:block;
+	clear:both;
+}
+	.experts__blocks__block{
+		display:inline-block;
+		vertical-align:top;
+		width:550px;
+		padding:0 20px;
+		margin:0 auto 93px;
+		-webkit-box-sizing:border-box;
+		-moz-box-sizing:border-box;
+		box-sizing:border-box;
+		text-align:left;
+	}
+		.experts__blocks__block-holder{
+			width:100%;
+			display:table;
+			margin:0 0 26px;
+		}
+		.experts__blocks__img{
+			display:table-cell;
+			width:200px;
+			max-width:200px;
+			padding:0 40px 0 0;
+		}
+		.experts__blocks__img img{max-width:100%;}
+		.experts__blocks__text{
+			display:table-cell;
+			vertical-align:bottom;
+		}
+			.experts__blocks__text p{margin:0;}
+			.experts__blocks__text__name{
+				display:block;
+				color:#323232;
+				margin:0 0 15px;
+				text-transform:uppercase;
+				font:20px/30px "OpenSans-SemiBold", Arial, Verdana, sans-serif;
+			}
+				.experts__blocks__text__name__sn,
+				.experts__blocks__text__name__fn{display:block;}
+			.experts__blocks__text__status{
+				display:block;
+				color:#f46267;
+				margin:0 0 4px;
+				font:18px/28px "OpenSans-Regular", Arial, Verdana, sans-serif;
+			}
+/* END experts__blocks */
+/* some adaptive styles */
+@media screen and (max-width:760px){
+	.experts__main__title {
+		margin-bottom: 50px;
+	}
+	.experts__blocks__block{
+		margin:0 0 50px;
+		padding:0;
+		display:block;
+		width:100%;
+	}
+}
+@media screen and (max-width:520px){
+	.experts__blocks__block{
+		text-align:center;
+	}
+	.experts__blocks__block-holder{
+			width:100%;
+			display:block;
+			margin:0 0 26px;
+		}
+		.experts__blocks__img{
+			display:block;
+			overflow:hidden;
+			width:200px;
+			max-width:200px;
+			padding:0;
+			margin:0 auto 24px;
+		}
+		.experts__blocks__text{
+			display:block;
+			width:100%;
+			overflow:hidden;
+			vertical-align:top;
+		}
+}
