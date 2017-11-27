@@ -1,0 +1,54 @@
+/* BEGIN news-post */
+.news-post{
+	width:100%;
+	max-width:570px;
+	margin:0 auto;
+	font:16px/26px "OpenSans-Regular", Arial, Verdana, sans-serif;
+}
+.news-post:after{
+	content:"";
+	display:block;
+	clear:both;
+}
+	.news-post p{margin:0 0 26px;}
+	.news-post__img{
+		overflow:hidden;
+		width:100%;
+		text-align:center;
+		margin:0 0 26px;
+	}
+		.news-post__img img{max-width:100%;}
+	.news-post__text{
+		overflow:hidden;
+		width:100%;
+		text-align:justify;
+	}
+		.news-post__date{
+			display:block;
+			color:#8a91c1;
+			margin:0 0 23px;
+			text-align:center;
+			font:16px/26px "OpenSans-Regular", Arial, Verdana, sans-serif;
+		}
+		.news-post__title{
+			margin:0 0 26px;
+			color:#323232;
+			text-align:center;
+			text-transform:uppercase;
+			font:24px/34px "OpenSans-SemiBold", Arial, Verdana, sans-serif;
+		}
+		.news-post__link-back{
+			text-decoration:underline;
+			color:#f46267;
+			font:14px/26px "OpenSans-SemiBold", Arial, Verdana, sans-serif;
+		}
+		.news-post__link-back:hover{text-decoration:none;}
+/* END news-post */
+@media screen and (max-width:640px){
+	.news-post__title{
+		font:20px/30px "OpenSans-SemiBold", Arial, Verdana, sans-serif;
+	}
+	.news-post__text{
+		text-align:left;
+	}
+}

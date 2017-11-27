@@ -1,0 +1,40 @@
+/* BEGIN vacancy blocks */
+.vacancy__blocks{
+	width:100%;
+	margin:0 0 50px;
+}
+.vacancy__blocks:after,
+	.vacancy__blocks__block:after{
+	content:"";
+	display:block;
+	clear:both;
+}
+	.vacancy__blocks__block{
+		border-top:1px solid #e1e5e5;
+		width:100%;
+		font:16px/26px "OpenSans-Regular", Arial, Verdana, sans-serif;
+		padding:40px 0 50px;
+	}
+		.vacancy__blocks__block p{margin:0 0 23px;}
+		.vacancy__blocks__block__title{
+			margin:0 0 16px;
+			text-transform:uppercase;
+			font:24px/34px "OpenSans-SemiBold", Arial, Verdana, sans-serif;
+		}
+		/* BEGIN vacancy__button */
+		.vacancy__button{
+			width:100%;
+			max-width:156px;
+			padding:5px 0 6px;
+			-webkit-box-sizing:border-box;
+			-moz-box-sizing:border-box;
+			box-sizing:border-box;
+			font:16px/26px "OpenSans-Regular", Arial, Verdana, sans-serif;
+		}
+		/* END vacancy__button */
+/* END vacancy blocks */
+@media screen and (max-width:640px){
+	.vacancy__blocks__block__title{
+		font:20px/30px "OpenSans-SemiBold", Arial, Verdana, sans-serif;
+	}
+}
