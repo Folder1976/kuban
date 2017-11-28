@@ -175,8 +175,21 @@ $(function() {
     //End FAQ accordeon
 
 
+    function initBackgroundResize() {
+        jQuery('.visual-box__bg-stretch').each(function() {
+            ImageStretcher.add({
+                container: this,
+                image: 'img'
+            });
+        });
+    };
+
+
 
 
 });
+
+
+
 
 
