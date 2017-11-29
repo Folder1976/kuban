@@ -1,5 +1,4 @@
 @charset "UTF-8";
-/*@import url(../libs/reset.css);*/
 @font-face {
   font-family: "OpenSans-Regular";
   font-weight: normal;
@@ -29,325 +28,222 @@
   src: url("../fonts/FAQ-svgfont/FAQ-svgfont.eot?#iefix") format("embedded-opentype"), url("../fonts/FAQ-svgfont/FAQ-svgfont.woff") format("woff"), url("../fonts/FAQ-svgfont/FAQ-svgfont.ttf") format("truetype"); }
 
 @font-face {
-  font-family: "font-icons";
+  font-family: "carousel-arrows";
   font-weight: normal;
   font-style: normal;
-  src: url("../fonts/font-icons/font-icons.eot");
-  src: url("../fonts/font-icons/font-icons.eot?#iefix") format("embedded-opentype"), url("../fonts/font-icons/font-icons.woff") format("woff"), url("../fonts/font-icons/font-icons.ttf") format("truetype"); }
+  src: url("../fonts/carousel-arrows/carousel-arrows.eot");
+  src: url("../fonts/carousel-arrows/carousel-arrows.eot?#iefix") format("embedded-opentype"), url("../fonts/carousel-arrows/carousel-arrows.woff") format("woff"), url("../fonts/carousel-arrows/carousel-arrows.ttf") format("truetype"); }
 
-/**
- * selectize.css (v0.12.4)
- * Copyright (c) 2013–2015 Brian Reavis & contributors
- *
- * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this
- * file except in compliance with the License. You may obtain a copy of the License at:
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software distributed under
- * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF
- * ANY KIND, either express or implied. See the License for the specific language
- * governing permissions and limitations under the License.
- *
- * @author Brian Reavis <brian@thirdroute.com>
- */
-.selectize-control.plugin-drag_drop.multi > .selectize-input > div.ui-sortable-placeholder {
-  visibility: visible !important;
-  background: #f2f2f2 !important;
-  background: rgba(0, 0, 0, 0.06) !important;
-  border: 0 none !important;
-  -webkit-box-shadow: inset 0 0 12px 4px #ffffff;
-  box-shadow: inset 0 0 12px 4px #ffffff; }
+@font-face {
+  font-family: "page-arrow";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/page-arrow/page-arrow.eot");
+  src: url("../fonts/page-arrow/page-arrow.eot?#iefix") format("embedded-opentype"), url("../fonts/page-arrow/page-arrow.woff") format("woff"), url("../fonts/page-arrow/page-arrow.ttf") format("truetype"); }
 
-.selectize-control.plugin-drag_drop .ui-sortable-placeholder::after {
-  content: '!';
-  visibility: hidden; }
+/*
+	HTML5 Reset :: style.css
+	----------------------------------------------------------
+	We have learned much from/been inspired by/taken code where offered from:
 
-.selectize-control.plugin-drag_drop .ui-sortable-helper {
-  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); }
+	Eric Meyer					:: http://meyerweb.com
+	HTML5 Doctor				:: http://html5doctor.com
+	and the HTML5 Boilerplate	:: http://html5boilerplate.com
 
-.selectize-dropdown-header {
-  position: relative;
-  padding: 5px 8px;
-  border-bottom: 1px solid #d0d0d0;
-  background: #f8f8f8;
-  -webkit-border-radius: 3px 3px 0 0;
-  border-radius: 3px 3px 0 0; }
+-------------------------------------------------------------------------------*/
+/* Let's default this puppy out
+-------------------------------------------------------------------------------*/
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, menu, nav, section, time, mark, audio, video, details, summary {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-weight: normal;
+  vertical-align: baseline;
+  background: transparent; }
 
-.selectize-dropdown-header-close {
-  position: absolute;
-  right: 8px;
-  top: 50%;
-  color: #303030;
-  opacity: 0.4;
-  margin-top: -12px;
-  line-height: 20px;
-  font-size: 20px !important; }
+article, aside, figure, footer, header, nav, section, details, summary {
+  display: block; }
 
-.selectize-dropdown-header-close:hover {
-  color: #000000; }
-
-.selectize-dropdown.plugin-optgroup_columns .optgroup {
-  border-right: 1px solid #f2f2f2;
-  border-top: 0 none;
-  float: left;
+/* Handle box-sizing while better addressing child elements:
+   http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+html {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
+          box-sizing: border-box; }
 
-.selectize-dropdown.plugin-optgroup_columns .optgroup:last-child {
-  border-right: 0 none; }
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit; }
 
-.selectize-dropdown.plugin-optgroup_columns .optgroup:before {
-  display: none; }
+/* consider resetting the default cursor: https://gist.github.com/murtaugh/5247154 */
+/* Responsive images and other embedded objects
+*/
+img,
+object,
+embed {
+  max-width: 100%; }
 
-.selectize-dropdown.plugin-optgroup_columns .optgroup-header {
-  border-top: 0 none; }
+/*
+   Note: keeping IMG here will cause problems if you're using foreground images as sprites.
+	 In fact, it *will* cause problems with Google Maps' controls at small size.
+	If this is the case for you, try uncommenting the following:
 
-.selectize-control.plugin-remove_button [data-value] {
-  position: relative;
-  padding-right: 24px !important; }
+#map img {
+		max-width: none;
+}
+*/
+/* force a vertical scrollbar to prevent a jumpy page */
+/*html {overflow-y: scroll;}*/
+/* we use a lot of ULs that aren't bulleted.
+	don't forget to restore the bullets within content. */
+ul {
+  list-style: none; }
 
-.selectize-control.plugin-remove_button [data-value] .remove {
-  z-index: 1;
-  /* fixes ie bug (see #392) */
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 17px;
-  text-align: center;
+blockquote, q {
+  quotes: none; }
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none; }
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+del {
+  text-decoration: line-through; }
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted #000;
+  cursor: help; }
+
+/* tables still need cellspacing="0" in the markup */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+th {
   font-weight: bold;
-  font-size: 12px;
-  color: inherit;
-  text-decoration: none;
-  vertical-align: middle;
-  display: inline-block;
-  padding: 2px 0 0 0;
-  border-left: 1px solid #d0d0d0;
-  -webkit-border-radius: 0 2px 2px 0;
-  border-radius: 0 2px 2px 0;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
+  vertical-align: bottom; }
 
-.selectize-control.plugin-remove_button [data-value] .remove:hover {
-  background: rgba(0, 0, 0, 0.05); }
+td {
+  font-weight: normal;
+  vertical-align: top; }
 
-.selectize-control.plugin-remove_button [data-value].active .remove {
-  border-left-color: #cacaca; }
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0; }
 
-.selectize-control.plugin-remove_button .disabled [data-value] .remove:hover {
-  background: none; }
+input, select {
+  vertical-align: middle; }
 
-.selectize-control.plugin-remove_button .disabled [data-value] .remove {
-  border-left-color: #ffffff; }
+pre {
+  white-space: pre;
+  /* CSS2 */
+  white-space: pre-wrap;
+  /* CSS 2.1 */
+  white-space: pre-line;
+  /* CSS 3 (and 2.1 as well, actually) */
+  word-wrap: break-word;
+  /* IE */ }
 
-.selectize-control.plugin-remove_button .remove-single {
-  position: absolute;
-  right: 28px;
-  top: 6px;
-  font-size: 23px; }
+input[type="radio"] {
+  vertical-align: text-bottom; }
 
-.selectize-control {
+input[type="checkbox"] {
+  vertical-align: bottom; }
+
+.ie7 input[type="checkbox"] {
+  vertical-align: baseline; }
+
+.ie6 input {
+  vertical-align: text-bottom; }
+
+select, input, textarea {
+  font: 99% sans-serif; }
+
+table {
+  font-size: inherit;
+  font: 100%; }
+
+small {
+  font-size: 85%; }
+
+strong {
+  font-weight: bold; }
+
+td, td img {
+  vertical-align: top; }
+
+/* Make sure sup and sub don't mess with your line-heights http://gist.github.com/413930 */
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
   position: relative; }
 
-.selectize-dropdown,
-.selectize-input,
-.selectize-input input {
-  color: #303030;
-  font-family: inherit;
-  font-size: 13px;
-  line-height: 18px;
-  -webkit-font-smoothing: inherit; }
+sup {
+  top: -0.5em; }
 
-.selectize-input,
-.selectize-control.single .selectize-input.input-active {
-  background: #ffffff;
-  cursor: text;
-  display: inline-block; }
+sub {
+  bottom: -0.25em; }
 
-.selectize-input {
-  border: 1px solid #d0d0d0;
-  padding: 8px 8px;
-  display: inline-block;
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-  z-index: 1;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1);
-  -webkit-border-radius: 3px;
-  border-radius: 3px; }
+/* standardize any monospaced elements */
+pre, code, kbd, samp {
+  font-family: monospace, sans-serif; }
 
-.selectize-control.multi .selectize-input.has-items {
-  padding: 6px 8px 3px; }
-
-.selectize-input.full {
-  background-color: #ffffff; }
-
-.selectize-input.disabled,
-.selectize-input.disabled * {
-  cursor: default !important; }
-
-.selectize-input.focus {
-  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15);
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15); }
-
-.selectize-input.dropdown-active {
-  -webkit-border-radius: 3px 3px 0 0;
-  border-radius: 3px 3px 0 0; }
-
-.selectize-input > * {
-  vertical-align: baseline;
-  display: -moz-inline-stack;
-  display: inline-block;
-  zoom: 1;
-  *display: inline; }
-
-.selectize-control.multi .selectize-input > div {
-  cursor: pointer;
-  margin: 0 3px 3px 0;
-  padding: 2px 6px;
-  background: #f2f2f2;
-  color: #303030;
-  border: 0 solid #d0d0d0; }
-
-.selectize-control.multi .selectize-input > div.active {
-  background: #e8e8e8;
-  color: #303030;
-  border: 0 solid #cacaca; }
-
-.selectize-control.multi .selectize-input.disabled > div,
-.selectize-control.multi .selectize-input.disabled > div.active {
-  color: #7d7d7d;
-  background: #ffffff;
-  border: 0 solid #ffffff; }
-
-.selectize-input > input {
-  display: inline-block !important;
-  padding: 0 !important;
-  min-height: 0 !important;
-  max-height: none !important;
-  max-width: 100% !important;
-  margin: 0 2px 0 0 !important;
-  text-indent: 0 !important;
-  border: 0 none !important;
-  background: none !important;
-  line-height: inherit !important;
-  -webkit-user-select: auto !important;
-  -webkit-box-shadow: none !important;
-  box-shadow: none !important; }
-
-.selectize-input > input::-ms-clear {
-  display: none; }
-
-.selectize-input > input:focus {
-  outline: none !important; }
-
-.selectize-input::after {
-  content: ' ';
-  display: block;
-  clear: left; }
-
-.selectize-input.dropdown-active::before {
-  content: ' ';
-  display: block;
-  position: absolute;
-  background: #f0f0f0;
-  height: 1px;
-  bottom: 0;
-  left: 0;
-  right: 0; }
-
-.selectize-dropdown {
-  position: absolute;
-  z-index: 10;
-  border: 1px solid #d0d0d0;
-  background: #ffffff;
-  margin: -1px 0 0 0;
-  border-top: 0 none;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  -webkit-border-radius: 0 0 3px 3px;
-  border-radius: 0 0 3px 3px; }
-
-.selectize-dropdown [data-selectable] {
-  cursor: pointer;
-  overflow: hidden; }
-
-.selectize-dropdown [data-selectable] .highlight {
-  background: rgba(125, 168, 208, 0.2);
-  -webkit-border-radius: 1px;
-  border-radius: 1px; }
-
-.selectize-dropdown [data-selectable],
-.selectize-dropdown .optgroup-header {
-  padding: 5px 8px; }
-
-.selectize-dropdown .optgroup:first-child .optgroup-header {
-  border-top: 0 none; }
-
-.selectize-dropdown .optgroup-header {
-  color: #303030;
-  background: #ffffff;
-  cursor: default; }
-
-.selectize-dropdown .active {
-  background-color: #f5fafd;
-  color: #495c68; }
-
-.selectize-dropdown .active.create {
-  color: #495c68; }
-
-.selectize-dropdown .create {
-  color: rgba(48, 48, 48, 0.5); }
-
-.selectize-dropdown-content {
-  overflow-y: auto;
-  overflow-x: hidden;
-  max-height: 200px;
-  -webkit-overflow-scrolling: touch; }
-
-.selectize-control.single .selectize-input,
-.selectize-control.single .selectize-input input {
+/* hand cursor on clickable elements */
+.clickable,
+label,
+input[type=button],
+input[type=submit],
+input[type=file],
+button {
   cursor: pointer; }
 
-.selectize-control.single .selectize-input.input-active,
-.selectize-control.single .selectize-input.input-active input {
-  cursor: text; }
+/* Webkit browsers add a 2px margin outside the chrome of form elements */
+button, input, select, textarea {
+  margin: 0; }
 
-.selectize-control.single .selectize-input:after {
-  content: ' ';
+/* make buttons play nice in IE */
+button,
+input[type=button] {
+  width: auto;
+  overflow: visible; }
+
+/* scale images in IE7 more attractively */
+.ie7 img {
+  -ms-interpolation-mode: bicubic; }
+
+/* prevent BG image flicker upon hover
+   (commented out as usage is rare, and the filter syntax messes with some pre-processors)
+.ie6 html {filter: expression(document.execCommand("BackgroundImageCache", false, true));}
+*/
+/* let's clear some floats */
+.clearfix:before, .clearfix:after {
+  content: "\0020";
   display: block;
-  position: absolute;
-  top: 50%;
-  right: 15px;
-  margin-top: -3px;
-  width: 0;
   height: 0;
-  border-style: solid;
-  border-width: 5px 5px 0 5px;
-  border-color: #808080 transparent transparent transparent; }
+  overflow: hidden; }
 
-.selectize-control.single .selectize-input.dropdown-active:after {
-  margin-top: -4px;
-  border-width: 0 5px 5px 5px;
-  border-color: transparent transparent #808080 transparent; }
+.clearfix:after {
+  clear: both; }
 
-.selectize-control.rtl.single .selectize-input:after {
-  left: 15px;
-  right: auto; }
+.clearfix {
+  zoom: 1; }
 
-.selectize-control.rtl .selectize-input > input {
-  margin: 0 4px 0 -2px !important; }
-
-.selectize-control .selectize-input.disabled {
-  opacity: 0.5;
-  background-color: #fafafa; }
-
+/*End Reset css*/
 /* Slider */
 .slick-slider {
   position: relative;
@@ -585,13 +481,17 @@
   opacity: .75;
   color: black; }
 
-@font-face {
-  font-family: 'carousel-arrows';
-  src: url("../fonts/carousel-arrows/carousel-arrows.eot?36961515");
-  src: url("../fonts/carousel-arrows/carousel-arrows.eot?36961515#iefix") format("embedded-opentype"), url("../fonts/carousel-arrows/carousel-arrows.woff2?36961515") format("woff2"), url("../fonts/carousel-arrows/carousel-arrows.woff?36961515") format("woff"), url("../fonts/carousel-arrows/carousel-arrows.ttf?36961515") format("truetype"), url("../fonts/carousel-arrows/carousel-arrows.svg?36961515#carousel-arrows") format("svg");
-  font-weight: normal;
-  font-style: normal; }
-
+/*@font-face {*/
+/*font-family: 'carousel-arrows';*/
+/*src: url('../fonts/carousel-arrows/carousel-arrows.eot?36961515');*/
+/*src: url('../fonts/carousel-arrows/carousel-arrows.eot?36961515#iefix') format('embedded-opentype'),*/
+/*url('../fonts/carousel-arrows/carousel-arrows.woff2?36961515') format('woff2'),*/
+/*url('../fonts/carousel-arrows/carousel-arrows.woff?36961515') format('woff'),*/
+/*url('../fonts/carousel-arrows/carousel-arrows.ttf?36961515') format('truetype'),*/
+/*url('../fonts/carousel-arrows/carousel-arrows.svg?36961515#carousel-arrows') format('svg');*/
+/*font-weight: normal;*/
+/*font-style: normal;*/
+/*}*/
 /* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
 /* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
 /*
@@ -634,16 +534,64 @@
 
 /* '' */
 /*@font-face {*/
-/*font-family: 'font-icons';*/
-/*src: url('../font/font-icons.eot?19867736');*/
-/*src: url('../font/font-icons.eot?19867736#iefix') format('embedded-opentype'),*/
-/*url('../font/font-icons.woff2?19867736') format('woff2'),*/
-/*url('../font/font-icons.woff?19867736') format('woff'),*/
-/*url('../font/font-icons.ttf?19867736') format('truetype'),*/
-/*url('../font/font-icons.svg?19867736#font-icons') format('svg');*/
+/*font-family: 'page-arrow';*/
+/*src: url('../fonts/page-arrow/font/page-arrow.eot?69357254');*/
+/*src: url('../fonts/page-arrow/font/page-arrow.eot?69357254#iefix') format('embedded-opentype'),*/
+/*url('../fonts/page-arrow/font/page-arrow.woff2?69357254') format('woff2'),*/
+/*url('../fonts/page-arrow/font/page-arrow.woff?69357254') format('woff'),*/
+/*url('../fonts/page-arrow/font/page-arrow.ttf?69357254') format('truetype'),*/
+/*url('../fonts/page-arrow/font/page-arrow.svg?69357254#page-arrow') format('svg');*/
 /*font-weight: normal;*/
 /*font-style: normal;*/
 /*}*/
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'page-arrow';
+    src: url('../font/page-arrow.svg?69357254#page-arrow') format('svg');
+  }
+}
+*/
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "page-arrow";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */ }
+
+.icon-main-arrow:before {
+  content: '\e811'; }
+
+/* '' */
+@font-face {
+  font-family: "font-icons";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/font-icons/font/font-icons.eot");
+  src: url("../fonts/font-icons/font/font-icons.eot?#iefix") format("embedded-opentype"), url("../fonts/font-icons/font/font-icons.woff") format("woff"), url("../fonts/font/font-icons/font-icons.ttf") format("truetype"); }
+
 /* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
 /* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
 /*
@@ -680,75 +628,55 @@
   -moz-osx-font-smoothing: grayscale;
   /* Uncomment for 3D effect */
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */ }
-  
+
 .icon-constr:before {
-    content: "";
-}
+  content: ""; }
 
 .icon-15:before {
-    content: "";
-}
+  content: ""; }
 
 .icon-ed:before {
-    content: "";
-}
+  content: ""; }
 
 .icon-build:before {
-    content: "";
-}
+  content: ""; }
 
 .icon-expert:before {
-    content: "";
-}
+  content: ""; }
 
 .icon-gov:before {
-    content: "";
-}
+  content: ""; }
 
 .icon-garant:before {
-    content: "";
-}
+  content: ""; }
 
 .icon-food:before {
-    content: "";
-}
+  content: ""; }
 
 .icon-horeca:before {
-    content: "";
-}
+  content: ""; }
 
 .icon-kons:before {
-    content: "";
-}
+  content: ""; }
 
 .icon-hoz:before {
-    content: "";
-}
+  content: ""; }
 
 .icon-labs:before {
-    content: "";
-}
-
-.icon-main-arrow:before {
-    content: "";
-}
+  content: ""; }
 
 .icon-prom:before {
-    content: "";
-}
+  content: ""; }
 
 .icon-transp:before {
-    content: "";
-}
+  content: ""; }
 
 .icon-time:before {
-    content: "";
-}
+  content: ""; }
 
 .icon-ok:before {
-    content: "";
-}
-/* '' */
+  content: ""; }
+
 .fancybox-enabled {
   overflow: hidden; }
 
@@ -2393,126 +2321,6 @@ button:active,
   font: 14px/20px "OpenSans-Regular", Arial, Verdana, sans-serif; }
 
 /* END services__container__form-holder */
-/* select */
-.jcf-select {
-  display: block;
-  vertical-align: top;
-  position: relative;
-  border: 1px solid #d4d7e0;
-  background: #fff;
-  margin: 0 0 20px;
-  min-width: 150px;
-  height: 41px;
-  width: 100%;
-  color: #646464;
-  padding: 6px 0 7px;
-  font: 18px/28px "OpenSans-Regular", Arial, Verdana, sans-serif;
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  cursor: pointer; }
-
-.jcf-select select {
-  z-index: 1;
-  left: 0;
-  top: 0; }
-
-.jcf-select .jcf-select-text {
-  -o-text-overflow: ellipsis;
-     text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-  cursor: default;
-  display: block;
-  font: 18px/28px "OpenSans-Regular", Arial, Verdana, sans-serif;
-  margin: 0 30px 0 16px;
-  color: #646464; }
-
-.jcf-select .jcf-select-opener {
-  position: absolute;
-  text-align: left;
-  background: none;
-  width: 32px;
-  bottom: 0;
-  right: 0;
-  top: 12px;
-  color: #969696;
-  font-size: 15px;
-  line-height: 15px; }
-
-.jcf-select.jcf-drop-active .jcf-select-opener {
-  -ms-transform: rotate(180deg);
-  -webkit-transform: rotate(180deg);
-  transform: rotate(180deg);
-  bottom: 9px;
-  right: 17px;
-  top: 0; }
-
-.jcf-select .jcf-select-opener .fa {
-  font-size: 18px;
-  line-height: 24px; }
-
-body > .jcf-select-drop {
-  position: absolute;
-  margin: -1px 0 0;
-  z-index: 9999; }
-
-body > .jcf-select-drop.jcf-drop-flipped {
-  margin: 1px 0 0; }
-
-.jcf-select .jcf-select-drop {
-  position: absolute;
-  margin-top: 0px;
-  z-index: 9999;
-  top: 100%;
-  left: -1px;
-  right: -1px;
-  width: 100%; }
-
-.jcf-select-drop-content ul {
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  background: #fff;
-  border: 1px solid #d4d7e0;
-  border-top: none;
-  overflow: hidden;
-  font: 18px/28px "OpenSans-Regular", Arial, Verdana, sans-serif;
-  -webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
-  -o-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
-  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25); }
-
-.jcf-select-drop-content ul:after {
-  content: "";
-  display: block;
-  clear: both; }
-
-.jcf-select-drop-content li {
-  margin: 0;
-  border-top: 1px solid #d4d7e0; }
-
-.jcf-select-drop-content li:first-child {
-  border-top: none; }
-
-.jcf-select-drop-content .jcf-option {
-  display: block;
-  -webkit-transition: background-color 0.3s 0s;
-  -o-transition: background-color 0.3s 0s;
-  transition: background-color 0.3s 0s;
-  color: #646464;
-  padding: 5px 4px 5px 19px;
-  cursor: pointer; }
-
-.jcf-select-drop-content .jcf-option:hover {
-  background-color: #f46267;
-  color: #fff; }
-
-.jcf-select-drop .jcf-option-hideme {
-  display: none; }
-
-/* end select */
 /* BEGIN services__container__list */
 .services__container__list {
   width: 103%;
@@ -3014,14 +2822,6 @@ body {
 section {
   position: relative; }
 
-.wrapper {
-  min-height: 100%;
-  overflow: hidden;
-  position: relative; }
-
-.empty {
-  height: 247px; }
-
 .container {
   width: 100%;
   margin: 0 auto;
@@ -3112,8 +2912,6 @@ button, .button {
   .popup .fancybox-close-small:focus::after {
     outline: none; }
   .popup .fancybox-close-small::after {
-    width: 25px;
-    height: 25px;
     background: transparent;
     color: #ffffff;
     opacity: .8;
@@ -3172,6 +2970,41 @@ button, .button {
     border: 1px solid #d4d7e0; }
   .callback-form .button {
     width: 33%; }
+
+/* Services select */
+select {
+  margin: 0;
+  background-color: white;
+  padding: 6px 4px 7px 16px;
+  border: 1px solid #d4d7e0;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+  margin-bottom: 20px;
+  color: #646464;
+  width: 100%;
+  font: 17px/28px "OpenSans-Regular", sans-serif;
+  -moz-appearance: none;
+  position: relative; }
+
+/* End Services select */
+i.icon-main-arrow {
+  font-size: 12px;
+  margin: 0 auto; }
+  i.icon-main-arrow:before {
+    font-family: "page-arrow";
+    display: inline-block;
+    padding-bottom: 1px; }
+
+.paging__next .icon-main-arrow {
+  -webkit-transform: rotate(180deg) translateY(-1px);
+      -ms-transform: rotate(180deg) translateY(-1px);
+          transform: rotate(180deg) translateY(-1px); }
+
+.calculate-form__button {
+  padding: 0; }
+
+i.preferences__icon {
+  font-family: "font-icons" !important; }
 
 /*End Layout Styles*/
 /*Header Styles*/
@@ -3347,6 +3180,7 @@ button, .button {
       display: none; }
 
 .nav-list__dropdown {
+  display: none;
   background: #ffffff;
   text-align: left;
   position: absolute;
@@ -3380,8 +3214,7 @@ button, .button {
   height: 247px;
   padding: 60px 0;
   background: #ebf0f0;
-  position: relative;
-  margin-top: -247px; }
+  position: relative; }
 
 .footer-inner {
   display: -webkit-box;
@@ -3685,7 +3518,11 @@ button, .button {
     -webkit-justify-content: space-around;
         -ms-flex-pack: distribute;
             justify-content: space-around;
-    width: 80%; }
+    width: 80%;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
     .offer__form .form-control input {
       width: 21%;
       -webkit-box-align: center;
@@ -3705,7 +3542,8 @@ button, .button {
 
 .offer__select {
   width: 22%;
-  display: inline-block; }
+  display: inline-block;
+  margin-bottom: 0; }
   .offer__select .selectize-input {
     -webkit-border-top-left-radius: 5px;
             border-top-left-radius: 5px;
@@ -4105,8 +3943,16 @@ button, .button {
 /* Small Devices, Tablets */
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
+  .section-heading .h2 {
+    font-size: 35px; }
   .header {
-    margin-top: 400px; }
+    margin-top: 0;
+    width: 100%;
+    height: auto; }
+  .header-inner {
+    position: relative;
+    width: 100%;
+    height: auto; }
   .header__main {
     margin: 15px 0; }
   .header__main__inner {
